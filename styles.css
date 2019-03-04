@@ -1,0 +1,7 @@
+body {
+    background-image: url('/images/windBackground.png');
+    background-color: #057e09;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+  }
