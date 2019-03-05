@@ -4,8 +4,8 @@ import { BrowserRouter as Router,
 Route } from 'react-router-dom';
 import Main from './components/Main';
 import Wind from './components/Wind';
-// import DistanceToHole from './components/DistanceToHole';
-// import ZipCode from './components/ZipCode';
+import ZipCode from './components/ZipCode';
+import DistanceToHole from './components/DistanceToHole';
 
 class App extends Component {
   render() {
@@ -14,9 +14,9 @@ class App extends Component {
       <div className="App">
 
           <Route exact path="/main" component={Main} />
-          <Route exact path="/weather" component={Wind} />
-          {/* <Route exact path="/distancetohole" component={DistanceToHole} /> */}
-          {/* <Route exact path="/zipcode" component={ZipCode} /> */}
+          <Route exact path="/wind" component={Wind} />
+          <Route exact path="/zipcode" component={ZipCode} />
+          <Route exact path="/distancetohole" component={DistanceToHole} />
       </div>
       </Router>
     );

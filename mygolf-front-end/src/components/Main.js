@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ZipCode from './ZipCode';
+import Wind from './Wind';
+import DistanceToHole from './DistanceToHole';
 
 
 class Main extends Component {
@@ -6,7 +9,8 @@ class Main extends Component {
         super(props);
         this.state = {
             speed: "",
-            deg: ""      
+            deg: "" ,
+            gust: ""     
         }
     }
 
@@ -19,10 +23,9 @@ class Main extends Component {
     render(){
         return (
             <div>
-                <form onSubmit={this.windSearch}>
-                    <input type="number" name="zipcode"/>
-                    <input type="submit"/>
-                </form>
+                <ZipCode />
+                <DistanceToHole />
+                <Wind />
             </div>
         )
         
