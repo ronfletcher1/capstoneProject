@@ -12,14 +12,15 @@ Resolution: MyGolfConditions updates the golfer on the
 current weather conditions and elevation wherever they are playing 
 golf so they may make the proper club selection
 
-Features:
+MVP Features:
 Weather API Wind speed display
 Weather API Wind direction display
-API Elevation display
 Elevation Club Distance
 Club Distance Catalog
 Club Suggestion Display
 
+Stretch Features
+API Elevation display
 
 How It Works:
 User inputs thier golf clubs and distance range. For example

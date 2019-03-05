@@ -16,7 +16,8 @@ class Wind extends Component {
 	}
 
 	componentDidMount() {
-		var url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
+		const zipCode = 
+		let url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
         const axiosPromise = axios.get(url);
         axiosPromise.then((weatherData) =>{
 			console.log(weatherData);
