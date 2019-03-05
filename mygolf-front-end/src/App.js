@@ -6,6 +6,7 @@ import Main from './components/Main';
 import Wind from './components/Wind';
 import ZipCode from './components/ZipCode';
 import DistanceToHole from './components/DistanceToHole';
+import Navbar from './components/Navbar'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
       <Router>
       <div className="App">
 
+          <Route exact path="/navbar" component={Navbar} />
           <Route exact path="/main" component={Main} />
           <Route exact path="/wind" component={Wind} />
           <Route exact path="/zipcode" component={ZipCode} />
