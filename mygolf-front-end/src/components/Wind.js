@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 
-
-
 class Wind extends Component {
 	constructor(props) {
 		super(props);
@@ -16,12 +14,11 @@ class Wind extends Component {
 		}
 	}
 
-	componentDidMount() {
-		console.log("form submitted");
-		
-	}
+
 	getData = zipCode=>{
 		const url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
+
+
 		const axiosPromise = axios.get(url)
 		axiosPromise.then((weatherData) => {
 			console.log(weatherData);
@@ -35,9 +32,12 @@ class Wind extends Component {
 	}
 	
 	zipCode = (e)=>{
-
-		this.getData(e.target.zipCode.value)
-
+		e.preventDefault()
+		console.log(e.target.zipcode.value)
+		this.setState({
+			zip_code: e.target.zipcode.value	
+		})
+		this.getData(e.target.zipcode.value)
 	}
 
 	windDirection = (degree) => {
