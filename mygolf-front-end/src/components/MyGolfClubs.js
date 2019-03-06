@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
+// import axios from 'axios';
+import Wind from './Wind'
 
 const myGolfClubs = {
-    driver: 240,
-    hybrid: 200,
-    twoIron: 190,
-    threeIron: 185,
-    fourIron: 180,
-    fiveIron: 170,
-    sixIron: 160,
-    sevenIron: 150,
-    eightIron: 140,
-    nineIron: 130,
-    pw:     125,
-    gw:     115,
-    sw:   95,
-    Putter: null  
+    240: "Driver",
+    200: "Hybrid",
+    190: "twoIron",
+    185: "threeIron",
+    180: "fourIron",
+    170: "fiveIron",
+    160: "sixIron",
+    150: "sevenIron",
+    140: "eightIron",
+    130: "nineIron",
+    125: "PW",
+    115: "GW",
+    95:   "SW"
 };
 
 class MyGolfClubs extends Component {
 	constructor() {
 		super();
-		this.state = {golfClubs: {}}
+        this.state = {
+            
+            golfClubs: {},
+            shot_distance: ""
+        }
     }
     
     componentDidMount() {
@@ -32,51 +35,65 @@ class MyGolfClubs extends Component {
         console.log(myGolfClubs);
     }
 
+    distance = (e)=>{
+		e.preventDefault()
+		console.log(e.target.distance.value)
+		this.setState({
+			shot_distance: e.target.distance.value	
+        })
+
+    }
+
+
     distanceToHole = (distance)=>{
-        if (distance > 225) 
-        return myGolfClubs.driver; 
-        if (distance > 190) 
-        return myGolfClubs.hybrid; 
-        if (distance > 185) 
-        return myGolfClubs.twoIron; 
-        if (distance > 180) 
-        return myGolfClubs.threeIron; 
-        if (distance > 175) 
-        return myGolfClubs.fourIron; 
-        if (distance > 165) 
-        return myGolfClubs.fiveIron; 
-        if (distance > 155) 
-        return myGolfClubs.sixIron; 
-        if (distance > 145) 
-        return myGolfClubs.sevenIron; 
-        if (distance > 135) 
-        return myGolfClubs.eightIron; 
-        if (distance > 125) 
-        return myGolfClubs.nineIron; 
-        if (distance > 120) 
-        return myGolfClubs.pw; 
-        if (distance > 95) 
-        return myGolfClubs.gw; 
-        if (distance > 85) 
-        return myGolfClubs.sw;  
+        console.log(distance)
+        if (distance > 225) {
+        return myGolfClubs['240']; 
+        } else if (distance > 190) { 
+        return myGolfClubs['200']; 
+        } else if (distance > 185) { 
+        return myGolfClubs['190']; 
+        } else if (distance > 180) { 
+        return myGolfClubs['185']; 
+        } else if (distance > 170) { 
+        return myGolfClubs['180']; 
+        } else if (distance > 160) { 
+        return myGolfClubs['170']; 
+        } else if (distance > 150) { 
+        return myGolfClubs['160']; 
+        } else if (distance > 140) { 
+        return myGolfClubs['150']; 
+        } else if (distance > 130) { 
+        return myGolfClubs['140']; 
+        } else if (distance > 125) { 
+        return myGolfClubs['130']; 
+        } else if (distance > 115) { 
+        return myGolfClubs['125']; 
+        } else if (distance > 95) { 
+        return myGolfClubs['GW']; 
+        } else if (distance > 80) { 
+        return myGolfClubs['SW']; 
+        } 
     }
     
     render() {
-		let golfShot = this.distanceToHole(this.distance)
+        let golfShot = this.distanceToHole(this.state.shot_distance)
+        console.log(golfShot)
 		return (
 			<div>
+                < Wind />
 				<div>
                 <form onSubmit={this.distance}>
                     <h1>Distance</h1>
-                    <input id="searchTerm" type="number" name="zipcode"/>
+                    <input id="searchTerm" type="number" name="distance"/>
                     <button type="submit"className="btn"/>
                 </form>
             </div>
 				<h1>Golf Clubs</h1>
-				<h1>Wind Adjuster<br></br>{this.state.temp}</h1>
-				<h1>Aim<br></br>{this.distance}</h1>
-				<h1>Distance to Hole<br></br>{this.state.driver}</h1>
-				<h1>Club Selection<br></br>{this.state.nineIron}</h1>
+				{/* <h1>Wind Adjuster<br></br>{this.state.temp}</h1> */}
+				<h1>Distance<br></br>{this.distanceToHole}</h1>
+				<h1>Distance to Hole<br></br>{golfShot}</h1>
+				<h1>Club Selection<br></br>{this.state.distanceToHole}</h1>
 			</div>
 		);
     }
