@@ -8,7 +8,7 @@ import Wind from './components/Wind';
 import DistanceToHole from './components/DistanceToHole';
 import Navbar from './components/Navbar'
 import MyGolfClubs from './components/MyGolfClubs'
-// import video from './components/GolfCouse.mp4';
+// import video from './componnts/GolfCouse.mp4';
 class App extends Component {
   render() {
     return (
@@ -19,7 +19,7 @@ class App extends Component {
           <Route exact path="/navbar" component={Navbar} />
           <Route exact path="/main" component={Main} />
           <Route exact path="/wind" component={Wind} />
-          <Route exact path="/zipcode" component={ZipCode} />
+          {/* <Route exact path="/zipcode" component={ZipCode} /> */}
           <Route exact path="/mygolfclubs" component={MyGolfClubs} />
           <Route exact path="/distancetohole" component={DistanceToHole} />
       </div>
