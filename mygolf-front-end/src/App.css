@@ -3,7 +3,9 @@
 }
 
 body {
-  background-image: url("https://thegolfdirector.com/wp-content/uploads/2016/08/14bunker_farmstead_links.jpg");
+
+  background-image: url("https://media.istockphoto.com/photos/concepts-picture-id505399502?k=6&m=505399502&s=612x612&w=0&h=IA1Y2sq-IExbpXU56xzdc68myN_SVjCprBELIY74Sz0=");
+
   background-size: cover;
 }
 
@@ -14,7 +16,7 @@ body {
   padding: 15px;
   border-radius: 50px;
   height: 877px;
-  width: 423px;
+  width: 456px;
   position: relative;
   margin: 30px auto;
   transform: scale(.8);
@@ -146,3 +148,8 @@ body {
     }
   }
 }
+
+.iphone5c {
+  margin: auto;
+}
+
