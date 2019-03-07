@@ -41,6 +41,7 @@ class Wind extends Component {
 	}
 
 	windDirection = (degree) => {
+		console.log(degree)
 		if ((degree >= 350 && degree <= 360) ||
 			(degree >= 0 && degree <= 10))
 			return "N";
