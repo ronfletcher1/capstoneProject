@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-// import { Link } from 'react-router-dom';
+
  class Navbar extends Component{
    constructor(){
      super();
@@ -15,7 +15,7 @@ import './Navbar.css';
    }
    render(){
      return(
-       <nav className="navbar navbar-inverse green">
+       <nav className="navbar navbar-inverse black">
               <div className="container-fluid">
                 <div className="navbar-header center">
                   <a className="navbar-brand" href="#">MyGolfConditions</a>
