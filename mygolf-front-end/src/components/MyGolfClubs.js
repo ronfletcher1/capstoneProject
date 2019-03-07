@@ -15,7 +15,7 @@ const myGolfClubs = {
     130: "Nine Iron",
     125: "Pitching Wedge",
     115: "Gap Wedge",
-    95:   "Sand Wedge"
+    95:  "Sand Wedge"
 };
 
 class MyGolfClubs extends Component {
