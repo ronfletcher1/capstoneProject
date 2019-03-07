@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ZipCode from 'ZipCode'
+// import ZipCode from 'ZipCode'
 
 
 
@@ -31,13 +31,13 @@ class Wind extends Component {
 			})
 		});
 	}
-	windSearch(e){
-		console.log(e)
-	   	e.preventDefault();
-	   	console.log("form submitted");
-	   	const zipCode = document.getElementById("searchTerm").value;
-	   	const url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
-   }
+	// windSearch(e){
+	// 	console.log(e)
+	//    	e.preventDefault();
+	//    	console.log("form submitted");
+	//    	const zipCode = document.getElementById("searchTerm").value;
+	//    	const url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
+  //  }
 
 	windDirection = (degree)=>{
 		if ((degree >= 350 && degree <= 360) ||
