@@ -5,17 +5,17 @@ import Wind from './Wind'
 const myGolfClubs = {
     240: "Driver",
     200: "Hybrid",
-    190: "twoIron",
-    185: "threeIron",
-    180: "fourIron",
-    170: "fiveIron",
-    160: "sixIron",
-    150: "sevenIron",
-    140: "eightIron",
-    130: "nineIron",
-    125: "PW",
-    115: "GW",
-    95:   "SW"
+    190: "Two Iron",
+    185: "Three Iron",
+    180: "Four Iron",
+    170: "Five Iron",
+    160: "Six Iron",
+    150: "Seven Iron",
+    140: "Eight Iron",
+    130: "Nine Iron",
+    125: "Pitching Wedge",
+    115: "Gap Wedge",
+    95:   "Sand Wedge"
 };
 
 class MyGolfClubs extends Component {
@@ -70,9 +70,9 @@ class MyGolfClubs extends Component {
         } else if (distance > 115) { 
         return myGolfClubs['125']; 
         } else if (distance > 95) { 
-        return myGolfClubs['GW']; 
+        return myGolfClubs['115']; 
         } else if (distance > 80) { 
-        return myGolfClubs['SW']; 
+        return myGolfClubs['95']; 
         } 
     }
     
