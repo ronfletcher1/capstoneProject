@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Navbar.css';
+import ProTips from './ProTips';
+import { Link } from 'react-router-dom'
+
  class Navbar extends Component{
    constructor(){
      super();
@@ -25,7 +28,12 @@ import './Navbar.css';
            `} >
                   <li className="active"><a href="#">Home</a></li>
            <li className="active"><a href="#">MyGolfClubs</a></li>
-           <li className="active"><a href="#">Pro Tips</a></li>
+           <li className="active"><a href="#">Pro Tips</a>
+            <div className="col-sm-4">
+              <Link to="/main/protips"><button className="btn btn-warning">Pro Tips</button></Link>
+            </div>
+           </li>
+
            <li className="active"><a href="#">About MGC</a></li>
            <li className="active"><a href="#">Contact</a></li>
                 </ul>
