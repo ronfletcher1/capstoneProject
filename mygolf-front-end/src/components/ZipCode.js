@@ -48,7 +48,6 @@
 //                 <form onSubmit={this.zipCode}>
 //                     <h1>Zip Code</h1>
 //                     <input id="searchTerm" type="number" name="zipcode"/>
-//                     <button type="submit"className="btn"/>
 //                 </form>
 //             </div>
 

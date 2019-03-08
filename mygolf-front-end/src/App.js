@@ -11,20 +11,28 @@ import Navbar from './components/Navbar'
 // import 'react-compass/dist/react-compass.css';
 import MyGolfClubs from './components/MyGolfClubs'
 import ProTips from './components/ProTips'
+import './assets/devices.min.css'
+import AboutMgc from './components/AboutMgc';
+import Contact from './components/Contact';
+// import Compass from './components/compass';
 // import video from './componnts/GolfCouse.mp4';
 class App extends Component {
-  render() {
-    return (
-      <Router>
-<div>
-      <div className="App">
-
+ render() {
+   return (
+     <Router>
+    <div>
+     <div className="marvel-device iphone5s green">
+      <div className="screen">
           <Route exact path="/navbar" component={Navbar} />
           <Route path="/main" component={Main} />
           {/* <Route exact path="/wind" component={Wind} /> */}
           {/* <Route exact path="/zipcode" component={ZipCode} /> */}
           <Route exact path="/mygolfclubs" component={MyGolfClubs} />
           <Route exact path="/distancetohole" component={DistanceToHole} />
+          <Route exact path="/protips" component={ProTips} />
+          <Route exact path="/aboutmgc" component={AboutMgc} />
+          <Route exact path="/contact" component={Contact} />
+      </div>
       </div>
       <div className="marvel-device iphone5s green">
         <div className="top-bar"></div>
@@ -33,16 +41,18 @@ class App extends Component {
         <div className="camera"></div>
         <div className="sensor"></div>
         <div className="speaker"></div>
+<<<<<<< HEAD
         <div className="screen">
           <Navbar/>
+=======
+>>>>>>> fd7002ba690f25e779eafa6eaa2b2b2cac442ea2
         </div>
-      <div class="home"></div>
-      <div class="bottom-bar"></div>
+      <div className="home"></div>
+      <div className="bottom-bar"></div>
     </div>
-</div>
-      </Router>
-    );
-  }
+     </Router>
+   );
+ }
 }
 
 export default App;
