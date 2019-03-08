@@ -43,6 +43,7 @@
     // }
 
     
+<<<<<<< HEAD
         // return (
         //     <div>
         //         <form onSubmit={this.zipCode}>
@@ -53,6 +54,18 @@
         //     </div>
 
         // );
+=======
+//         return (
+//             <div>
+//                 <form onSubmit={this.zipCode}>
+//                     <h1>Zip Code</h1>
+//                     <input id="searchTerm" type="number" name="zipcode"/>
+//                     <button type="submit"className="btn"/>
+//                 </form>
+//             </div>
+
+//         );
+>>>>>>> 6866bfc3fd458ae16f2bc1421e488145cf22c775
 // }
 
 

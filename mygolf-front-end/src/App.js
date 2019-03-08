@@ -19,6 +19,7 @@ class App extends Component {
 <div>
      <div className="App">
 
+<<<<<<< HEAD
          <Route exact path="/navbar" component={Navbar} />
          <Route path="/main" component={Main} />
          {/* <Route exact path="/wind" component={Wind} /> */}
@@ -39,6 +40,28 @@ class App extends Component {
      <div class="home"></div>
      <div class="bottom-bar"></div>
    </div>
+=======
+          <Route exact path="/navbar" component={Navbar} />
+          <Route path="/main" component={Main} />
+          {/* <Route exact path="/wind" component={Wind} /> */}
+          {/* <Route exact path="/zipcode" component={ZipCode} /> */}
+          <Route exact path="/mygolfclubs" component={MyGolfClubs} />
+          <Route exact path="/distancetohole" component={DistanceToHole} />
+      </div>
+      <div class="marvel-device iphone5s green">
+        <div class="top-bar"></div>
+        <div class="sleep"></div>
+        <div class="volume"></div>
+        <div class="camera"></div>
+        <div class="sensor"></div>
+        <div class="speaker"></div>
+        <div class="screen">
+          <Navbar/>
+        </div>
+      <div class="home"></div>
+      <div class="bottom-bar"></div>
+    </div>
+>>>>>>> 6866bfc3fd458ae16f2bc1421e488145cf22c775
 </div>
      </Router>
    );
