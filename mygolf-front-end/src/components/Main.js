@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import ZipCode from './ZipCode';
 import Wind from './Wind';
 import DistanceToHole from './DistanceToHole';
-import { Route }from "react-router-dom";
+import { Route } from "react-router-dom";
 import Protips from './ProTips';
 
 

@@ -62,6 +62,10 @@ User inputs thier golf clubs and distance range. For example
     
 }
 
+# Authors
+* Cody Summers
+* Ron Fletcher
+
 tailwindSpeed = x
 function clubSelect(){
     if tailwindspeed > 1 then distance - 1 

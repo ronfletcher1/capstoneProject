@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Compass from './Compass';
 
 class Wind extends Component {
 	constructor(props) {
@@ -7,7 +8,7 @@ class Wind extends Component {
 		this.state = {
 			icon: "",
 			wind_speed: "",
-			wind_direction: "",
+			wind_direction: 10,
 			wind_gust: "",
 			zip_code:""
 		}
@@ -17,6 +18,7 @@ class Wind extends Component {
 		const url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
 		const axiosPromise = axios.get(url)
 		axiosPromise.then((weatherData) => {
+			console.log('wind_direction:', weatherData.data.wind.deg)
 			console.log(weatherData);
 			this.setState({
 				temp: weatherData.data.main.temp,
@@ -24,6 +26,7 @@ class Wind extends Component {
 				wind_direction: weatherData.data.wind.deg,
 				wind_gust: weatherData.data.wind.gust,
 			})
+		
 		});
 	}
 
@@ -86,47 +89,57 @@ class Wind extends Component {
 		if (degree >= 330 && degree <= 340)
 			return "NNW"
   }
-
-	// windSpeed = (speed)=>{
-	// 	if ((speed >= 3.0))
-	// 	return "N";
-	// 	if (speed >= 20 && speed <= 30)
-	// 	return "NNE";
-	// 	if (speed >= 40 && speed <= 50)
-	// 	return "NE"
-	// 	if (speed >= 60 && speed <= 70)
-	// 	return "ENE"
-	// 	if (speed >= 80 && speed <= 100)
-	// 	return "E"
-	// 	if (speed >= 110 && speed <= 120)
-	// 	return "ESE"
-	// 	if (speed >= 130 && speed <= 140)
-	// 	return "SE"
-	// 	if (speed >= 150 && speed <= 160)
-	// 	return "SSE"
-	// 	if (speed >= 170 && speed <= 190)
-	// 	return "S"
-	// 	if (speed >= 200 && speed <= 210)
-	// 	return "SSW"
-	// 	if (speed >= 220 && speed <= 230)
-	// 	return "SW"
-	// 	if (speed >= 240 && speed <= 250)
-	// 	return "WSW"
-	// 	if (speed >= 260 && speed <= 280)
-	// 	return "W"
-	// 	if (speed >= 290 && speed <= 300)
-	// 	return "WNW"
-	// 	if (speed >= 310 && speed <= 320)
-	// 	return "NW"
-	// 	if (speed >= 330 && speed <= 340)
-	// 	return "NNW"
-
-	// }
+  
+  facingDirection = (faceDegree) => {
+	console.log(faceDegree)
+	if ((faceDegree >= 350 && faceDegree <= 360) ||
+		(faceDegree >= 0 && faceDegree <= 10))
+		return "N";
+	if (faceDegree >= 20 && faceDegree <= 30)
+		return "NNE";
+	if (faceDegree >= 40 && faceDegree <= 50)
+		return "NE"
+	if (faceDegree >= 60 && faceDegree <= 70)
+		return "ENE"
+	if (faceDegree >= 80 && faceDegree <= 100)
+		return "E"
+	if (faceDegree >= 110 && faceDegree <= 120)
+		return "ESE"
+	if (faceDegree >= 130 && faceDegree <= 140)
+		return "SE"
+	if (faceDegree >= 150 && faceDegree <= 160)
+		return "SSE"
+	if (faceDegree >= 170 && faceDegree <= 190)
+		return "S"
+	if (faceDegree >= 200 && faceDegree <= 210)
+		return "SSW"
+	if (faceDegree >= 220 && faceDegree <= 230)
+		return "SW"
+	if (faceDegree >= 240 && faceDegree <= 250)
+		return "WSW"
+	if (faceDegree >= 260 && faceDegree <= 280)
+		return "W"
+	if (faceDegree >= 290 && faceDegree <= 300)
+		return "WNW"
+	if (faceDegree >= 310 && faceDegree <= 320)
+		return "NW"
+	if (faceDegree >= 330 && faceDegree <= 340)
+		return "NNW"
+}
+	
+	golfWindDirection = (windDirection, faceDegree)=>{
+			console.log(windDirection)
+		if (windDirection === faceDegree)
+			return "tailWind"
+		}
+	
 
 	render() {
 		let golfWind = this.windDirection(this.state.wind_direction)
+		let golfWindDirection = this.golfWindDirection(golfWind, "SSE")
 		return (
 			<div>
+				<Compass windBlowing={this.state.wind_direction}/>
 				<div>
                 <form onSubmit={this.zipCode}>
                     <h1>Zip Code</h1>
@@ -138,6 +151,7 @@ class Wind extends Component {
 				<h1>Current Temp<br></br>{this.state.temp}</h1>
 				<h1>Wind Speed<br></br>{this.state.wind_speed}</h1>
 				<h1>Wind Blowing From<br></br>{golfWind}</h1>
+				<h1>Golf Wind Type<br></br>{golfWindDirection}</h1>
 				<h1>Wind Gust<br></br>{this.state.wind_gust}</h1>
 			</div>
 		);
