@@ -22,7 +22,6 @@ class MyGolfClubs extends Component {
 	constructor() {
 		super();
         this.state = {
-            
             golfClubs: {},
             shot_distance: ""
         }
@@ -43,8 +42,6 @@ class MyGolfClubs extends Component {
         })
 
     }
-
-
     distanceToHole = (distance)=>{
         console.log(distance)
         if (distance > 225) {
@@ -82,43 +79,29 @@ class MyGolfClubs extends Component {
 		return (
 			<div>
                 < Wind />
-				<div>
+			<div>
                 <form onSubmit={this.distance}>
                     <h4>Distance</h4>
                     <input id="searchTerm" type="number" name="distance"/>
                     <button type="submit"className="btn"/>
                 </form>
             </div>
+            <div>
 				<h4>Golf Clubs</h4>
 				{/* <h1>Wind Adjuster<br></br>{this.state.temp}</h1> */}
 				<h4>Distance<br></br>{this.distanceToHole}</h4>
 				<h4>Distance to Hole<br></br>{golfShot}</h4>
 				<h4>Club Selection<br></br>{this.state.distanceToHole}</h4>
 			</div>
+            </div>
 		);
     }
 } 
-    export default MyGolfClubs;
+export default MyGolfClubs;
 
-// const myGolfClubs = {
-//     driver: 240,
-//     hybrid: 200,
-//     twoIron: 190,
-//     threeIron: 185,
-//     fourIron: 180,
-//     fiveIron: 170,
-//     sixIron: 160,
-//     sevenIron: 150,
-//     eightIron: 140,
-//     nineIron: 130,
-//     pw:     125,
-//     gw:     115,
-//     sw:   95,
-//     Putter: null  
-// };
-// console.log(myGolfClubs);
 
-// this function adjust club max distances based on the difference in 
+
+{/* // this function adjust club max distances based on the difference in 
 // in elevation from the base elevation
 // let currentElevation = 1093
 // let newElevation = 4000
@@ -159,4 +142,4 @@ class MyGolfClubs extends Component {
 //     return myGolfClubs + 35
 // }
 
-
+ */}

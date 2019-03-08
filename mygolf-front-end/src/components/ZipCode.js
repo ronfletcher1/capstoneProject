@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 
 
-function ZipCode () {
-    console.log("yo yo")
+// function ZipCode () {
+//     console.log("yo yo")
 
     // const windSearch = (e) => {
     //     console.log(e)
@@ -46,14 +46,14 @@ function ZipCode () {
         // return (
         //     <div>
         //         <form onSubmit={this.zipCode}>
-        //             <h1>Zip Code</h1>
+        //             <h4>Zip Code</h4>
         //             <input id="searchTerm" type="number" name="zipcode"/>
         //             <button type="submit"className="btn"/>
         //         </form>
         //     </div>
 
         // );
-}
+// }
 
 
-export default ZipCode;
+// export default ZipCode;

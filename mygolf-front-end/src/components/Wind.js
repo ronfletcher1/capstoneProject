@@ -15,19 +15,8 @@ class Wind extends Component {
   
 	getData = zipCode=>{
 		const url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
-
 		const axiosPromise = axios.get(url)
 		axiosPromise.then((weatherData) => {
-			console.log(weatherData);
-
-		}) 
-	
-	};
-	componentDidMount() {
-		const zipCode = 28634
-		let url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
-        const axiosPromise = axios.get(url);
-        axiosPromise.then((weatherData) =>{
 			console.log(weatherData);
 			this.setState({
 				temp: weatherData.data.main.temp,
@@ -37,6 +26,21 @@ class Wind extends Component {
 			})
 		});
 	}
+
+	// componentDidMount() {
+	// 	const zipCode = 
+	// 	let url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
+    //     const axiosPromise = axios.get(url);
+    //     axiosPromise.then((weatherData) =>{
+	// 		console.log(weatherData);
+	// 		this.setState({
+	// 			temp: weatherData.data.main.temp,
+	// 			wind_speed: weatherData.data.wind.speed,
+	// 			wind_direction: weatherData.data.wind.deg,
+	// 			wind_gust: weatherData.data.wind.gust,
+	// 		})
+	// 	});
+	// }
 	zipCode = (e)=>{
 		e.preventDefault()
 		console.log(e.target.zipcode.value)

@@ -1,35 +1,39 @@
 import React, { Component } from 'react';
-import ZipCode from './ZipCode';
+// import ZipCode from './ZipCode';
 import Wind from './Wind';
 import DistanceToHole from './DistanceToHole';
+import { Route } from "react-router-dom";
+import Protips from './ProTips';
+
 
 
 class Main extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            speed: "",
-            deg: "" ,
-            gust: ""     
-        }
-    }
+   constructor(props){
+       super(props);
+       this.state = {
+           speed: "",
+           deg: "" ,
+           gust: ""
+       }
+   }
 
-    windSearch(e){
-        console.log(e)
-        e.preventDefault();
-        console.log("form submitted")
-    }
+   windSearch(e){
+       console.log(e)
+       e.preventDefault();
+       console.log("form submitted")
+   }
 
-    render(){
-        return (
-            <div>
-                <ZipCode />
-                <DistanceToHole />
-                <Wind />
-            </div>
-        )
-        
-    };
+   render(){
+       return (
+           <div>
+               {/* <ZipCode /> */}
+               <DistanceToHole />
+               <Wind />
+               <Route exact path="/main/protips" component={Protips} />
+           </div>
+       )
+
+   };
 }
 
 
@@ -50,4 +54,3 @@ export default Main;
 // function windData(wind) {
 //     console.log(wind)
 // }
-
