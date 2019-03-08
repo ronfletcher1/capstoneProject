@@ -89,15 +89,9 @@ class MyGolfClubs extends Component {
             <div>
 				<h4>Golf Clubs</h4>
 				{/* <h1>Wind Adjuster<br></br>{this.state.temp}</h1> */}
-<<<<<<< HEAD
 				<h1>Distance<br></br>{golfShot}</h1>
 				<h1>Distance to Hole<br></br>{golfShot}</h1>
 				<h1>Club Selection<br></br>{golfShot}</h1>
-=======
-				<h4>Distance<br></br>{this.distanceToHole}</h4>
-				<h4>Distance to Hole<br></br>{golfShot}</h4>
-				<h4>Club Selection<br></br>{this.state.distanceToHole}</h4>
->>>>>>> fd7002ba690f25e779eafa6eaa2b2b2cac442ea2
 			</div>
             </div>
 		);

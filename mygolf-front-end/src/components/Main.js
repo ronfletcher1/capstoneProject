@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 // import ZipCode from './ZipCode';
 import Wind from './Wind';
 import DistanceToHole from './DistanceToHole';
-<<<<<<< HEAD
 import { Route } from "react-router-dom";
 import Protips from './ProTips';
-=======
-import { Route }from "react-router-dom";
-import ProTips from './ProTips';
->>>>>>> fd7002ba690f25e779eafa6eaa2b2b2cac442ea2
 
 
 
