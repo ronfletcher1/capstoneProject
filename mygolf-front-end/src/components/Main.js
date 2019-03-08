@@ -2,44 +2,12 @@ import React, { Component } from 'react';
 // import ZipCode from './ZipCode';
 import Wind from './Wind';
 import DistanceToHole from './DistanceToHole';
-<<<<<<< HEAD
-import { Route } from "react-router-dom";
-=======
 import { Route }from "react-router-dom";
->>>>>>> 6866bfc3fd458ae16f2bc1421e488145cf22c775
-import Protips from './ProTips';
+import ProTips from './ProTips';
 
 
 
 class Main extends Component {
-<<<<<<< HEAD
-   constructor(props){
-       super(props);
-       this.state = {
-           speed: "",
-           deg: "" ,
-           gust: ""
-       }
-   }
-
-   windSearch(e){
-       console.log(e)
-       e.preventDefault();
-       console.log("form submitted")
-   }
-
-   render(){
-       return (
-           <div>
-               {/* <ZipCode /> */}
-               <DistanceToHole />
-               <Wind />
-               <Route exact path="/main/protips" component={Protips} />
-           </div>
-       )
-
-   };
-=======
     constructor(props){
         super(props);
         this.state = {
@@ -61,12 +29,11 @@ class Main extends Component {
                 {/* <ZipCode /> */}
                 <DistanceToHole />
                 <Wind />
-                <Route exact path="/main/protips" component={Protips} />
+                <Route exact path="/main/protips" component={ProTips} />
             </div>
         )
         
     };
->>>>>>> 6866bfc3fd458ae16f2bc1421e488145cf22c775
 }
 
 

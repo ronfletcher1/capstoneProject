@@ -83,7 +83,6 @@ class MyGolfClubs extends Component {
                 <form onSubmit={this.distance}>
                     <h4>Distance</h4>
                     <input id="searchTerm" type="number" name="distance"/>
-                    <button type="submit"className="btn"/>
                 </form>
             </div>
             <div>

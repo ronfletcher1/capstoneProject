@@ -5,9 +5,10 @@ class ProTips extends Component{
         
         return(
             <div className="protips">
-                <ul>
-                    <li>CrossWinds</li>
-                    <p>
+               <div className="container">
+               <header>ProTips</header>
+               <li><h4>CrossWinds</h4></li>
+                    <b>
                     Unlike hitting with the wind at your back or in your face, 
                     playing through a strong crosswind isn’t a simple matter of 
                     changing clubs and maybe tweaking your technique. A sideways 
@@ -16,8 +17,8 @@ class ProTips extends Component{
                     Of course, a crosswind can be a great advantage in the right 
                     situation – but only if you’re prepared for it. We’ve got several 
                     tips that will boost your odds:
-
-                    Go with your normal shot: A crosswind gives you two options 
+                    <br></br>
+                    <br></br>Go with your normal shot: A crosswind gives you two options 
                     – curve the ball into the wind, or curve it with the wind. 
                     Unless you’re an advanced golfer with the skill to shape shots 
                     in either direction, your best bet is to go with your natural 
@@ -25,7 +26,8 @@ class ProTips extends Component{
                     right-hander), aim farther left in a left-to-right wind; aim 
                     straight at the target in a right-to-left breeze, letting the two 
                     forces cancel each other out.
-                    Play a runner that rides the crosswind: The situation – left-to-right 
+                    <br></br>
+                    <br></br>Play a runner that rides the crosswind: The situation – left-to-right 
                     wind, flag on the right, no hazards guarding the green’s front left. 
                     Opportunity knocks. Play it correctly and the wind will take your ball 
                     straight to the hole. Aim well left and set up for a straight shot or 
@@ -42,9 +44,10 @@ class ProTips extends Component{
                     want to aim as far as possible from the hazard to make absolutely certain 
                     you don’t find it. Wind blowing away from trouble? Take a more aggressive 
                     line and trust the wind to steer the ball toward safety.
-                    </p>
-                    <li>Short Game Shots</li>
+                    </b>
+                    <li><h4>Short Game Shots</h4></li>
                     <p>
+                    <b>
                     Wind affects these shots too! Pitching into a stronger breeze 
                     will all but stop your shots’ roll out. Conversely, chipping 
                     and pitching downwind will make it roll out a lot more. The ball 
@@ -53,17 +56,19 @@ class ProTips extends Component{
                     approach shot. Take a stronger club and swing easier. This will 
                     help you control spin and help the shot roll out like you thought 
                     it would.
-                    </p>
-                    <li>Ball Position</li>
+                    </b>
+                </p>
+                    <li><h4>Ball Position</h4></li>
                     <p>
+                    <b>
                     In order to lessen the impact of a stiff breeze, you’ll want 
                     to hit the ball lower than normal. In order to accomplish this, 
                     play the ball back further in your stance. Try putting it back 
                     about an inch farther back than normal and you’ll find that the 
                     ball comes out lower and stays under the wind better.
+                    </b>
                     </p>
-                </ul>
-                
+               </div>
             </div>
         )
     }

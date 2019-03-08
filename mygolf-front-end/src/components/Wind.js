@@ -131,7 +131,6 @@ class Wind extends Component {
                 <form onSubmit={this.zipCode}>
                     <h4>Zip Code</h4>
                     <input id="searchTerm" type="number" name="zipcode"/>
-                    <button type="submit"className="btn"/>
                 </form>
             </div>
 				<h4>Golf Conditions</h4>

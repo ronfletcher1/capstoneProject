@@ -4,11 +4,13 @@ import React from 'react';
 function DistanceToHole(){
         return (
             <div>
+                <div className="container">
                 <form>
-                    <h1>Distance To Hole</h1>
+                    <h4>Distance To Hole</h4>
                     <input type="number" name="distance"/>
                     <input type="submit"/>
                 </form>
+                </div>
             </div>
         )
 }

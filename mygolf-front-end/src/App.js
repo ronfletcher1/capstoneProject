@@ -7,62 +7,44 @@ import Main from './components/Main';
 // import ZipCode from './components/ZipCode';
 import DistanceToHole from './components/DistanceToHole';
 import Navbar from './components/Navbar'
-import Compass from 'react-Compass';
-import 'react-compass/dist/react-compass.css';
+// import Compass from 'react-Compass';
+// import 'react-compass/dist/react-compass.css';
 import MyGolfClubs from './components/MyGolfClubs'
 import ProTips from './components/ProTips'
+import './assets/devices.min.css'
+import AboutMgc from './components/AboutMgc';
+import Contact from './components/Contact';
+// import Compass from './components/compass';
 // import video from './componnts/GolfCouse.mp4';
 class App extends Component {
  render() {
    return (
      <Router>
-<div>
-     <div className="App">
-
-<<<<<<< HEAD
-         <Route exact path="/navbar" component={Navbar} />
-         <Route path="/main" component={Main} />
-         {/* <Route exact path="/wind" component={Wind} /> */}
-         {/* <Route exact path="/zipcode" component={ZipCode} /> */}
-         <Route exact path="/mygolfclubs" component={MyGolfClubs} />
-         <Route exact path="/distancetohole" component={DistanceToHole} />
-     </div>
-     <div class="marvel-device iphone5s green">
-       <div class="top-bar"></div>
-       <div class="sleep"></div>
-       <div class="volume"></div>
-       <div class="camera"></div>
-       <div class="sensor"></div>
-       <div class="speaker"></div>
-       <div class="screen">
-         <Navbar/>
-       </div>
-     <div class="home"></div>
-     <div class="bottom-bar"></div>
-   </div>
-=======
+    <div>
+     <div className="marvel-device iphone5s green">
+      <div className="screen">
           <Route exact path="/navbar" component={Navbar} />
           <Route path="/main" component={Main} />
           {/* <Route exact path="/wind" component={Wind} /> */}
           {/* <Route exact path="/zipcode" component={ZipCode} /> */}
           <Route exact path="/mygolfclubs" component={MyGolfClubs} />
           <Route exact path="/distancetohole" component={DistanceToHole} />
+          <Route exact path="/protips" component={ProTips} />
+          <Route exact path="/aboutmgc" component={AboutMgc} />
+          <Route exact path="/contact" component={Contact} />
       </div>
-      <div class="marvel-device iphone5s green">
-        <div class="top-bar"></div>
-        <div class="sleep"></div>
-        <div class="volume"></div>
-        <div class="camera"></div>
-        <div class="sensor"></div>
-        <div class="speaker"></div>
-        <div class="screen">
-          <Navbar/>
+      </div>
+      <div className="marvel-device iphone5s green">
+        <div className="top-bar"></div>
+        <div className="sleep"></div>
+        <div className="volume"></div>
+        <div className="camera"></div>
+        <div className="sensor"></div>
+        <div className="speaker"></div>
         </div>
-      <div class="home"></div>
-      <div class="bottom-bar"></div>
+      <div className="home"></div>
+      <div className="bottom-bar"></div>
     </div>
->>>>>>> 6866bfc3fd458ae16f2bc1421e488145cf22c775
-</div>
      </Router>
    );
  }
