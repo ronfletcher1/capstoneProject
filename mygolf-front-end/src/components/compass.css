@@ -4,7 +4,7 @@
     background: #ccc;
     border-radius: 50%;
     position: relative;
-    transform: rotate(25deg);
+    transform: rotate(0deg);
   }
   
   .compass-arrow {
@@ -20,10 +20,21 @@
   .wind-arrow {
     width: 150px;
     height: 20px;
-    background: #00a;
+    /* background: green; */
     position: absolute;
     top: calc(50% - 10px);
     left: 25px;
     transform-origin: center;
+    /* border-left: 00px solid transparent;   */
+    /* left arrow slant */
+    border-right: 100px solid transparent; 
+    /* right arrow slant */
+    border-bottom: 10px solid green; 
+    /* bottom, add background color here */
+    font-size: 0;
+    line-height: 0;
+    border-width: 0px 10px 10px 0px;
+    border-radius: 0px 90px 90px 0px;
+    display: inline-block;
   }
   
