@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Wind from './Wind';
 import DistanceToHole from './DistanceToHole';
 import { Route } from "react-router-dom";
-import Protips from './ProTips';
+import ProTips from './ProTips';
 
 
 

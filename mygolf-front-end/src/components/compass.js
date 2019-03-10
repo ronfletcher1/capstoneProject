@@ -24,10 +24,10 @@ class Compass extends Component {
         <DeviceOrientation>
           {({ absolute, alpha, beta, gamma }) => (
             <div>
-              {`Absolute: ${absolute}`}
-              {`Alpha: ${alpha}`}
-              {`Beta: ${beta}`}
-              {`Gamma: ${gamma}`}
+              {`${absolute}`}
+              {`${alpha}`}
+              {`${beta}`}
+              {`${gamma}`}
 
               <div
                 className="compass-circle"
@@ -35,7 +35,7 @@ class Compass extends Component {
               >
                 <div className="compass-arrow" />
               <div className="wind-arrow"
-              style={{ transform: `rotate(${this.state.wind_direction}deg)` }} />
+              style={{ transform: `rotate(${this.state.wind_direction + 100}deg)` }} />
               </div>
             </div>
           )}

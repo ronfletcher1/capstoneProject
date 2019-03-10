@@ -8,7 +8,7 @@ class Wind extends Component {
 		this.state = {
 			icon: "",
 			wind_speed: "",
-			wind_direction: 10,
+			wind_direction: "",
 			wind_gust: "",
 			zip_code:""
 		}

@@ -41,14 +41,12 @@ class App extends Component {
         <div className="camera"></div>
         <div className="sensor"></div>
         <div className="speaker"></div>
-<<<<<<< HEAD
         <div className="screen">
           <Navbar/>
-=======
->>>>>>> fd7002ba690f25e779eafa6eaa2b2b2cac442ea2
         </div>
       <div className="home"></div>
       <div className="bottom-bar"></div>
+    </div>
     </div>
      </Router>
    );
