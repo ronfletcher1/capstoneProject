@@ -12,7 +12,6 @@ import Navbar from './components/Navbar'
 import MyGolfClubs from './components/MyGolfClubs'
 import ProTips from './components/ProTips'
 import './assets/devices.min.css'
-import AboutMgc from './components/AboutMgc';
 import Contact from './components/Contact';
 // import Compass from './components/compass';
 // import video from './componnts/GolfCouse.mp4';
@@ -30,7 +29,6 @@ class App extends Component {
           <Route exact path="/mygolfclubs" component={MyGolfClubs} />
           <Route exact path="/distancetohole" component={DistanceToHole} />
           <Route exact path="/protips" component={ProTips} />
-          <Route exact path="/aboutmgc" component={AboutMgc} />
           <Route exact path="/contact" component={Contact} />
       </div>
       </div>

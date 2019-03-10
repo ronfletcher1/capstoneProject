@@ -86,7 +86,7 @@ class MyGolfClubs extends Component {
                 </form>
             </div>
             <div>
-				<h4>Golf Clubs</h4>
+				{/* <h4>Golf Clubs</h4> */}
 				{/* <h1>Wind Adjuster<br></br>{this.state.temp}</h1> */}
 				<h4>Distance<br></br>{this.distanceToHole}</h4>
 				<h4>Distance to Hole<br></br>{golfShot}</h4>
