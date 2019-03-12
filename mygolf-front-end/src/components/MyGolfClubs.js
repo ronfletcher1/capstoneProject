@@ -44,6 +44,7 @@ class MyGolfClubs extends Component {
 
     }
     distanceToHole = (distance)=>{
+        // let distance = 145
         console.log(distance)
         if (distance > 225) {
         return myGolfClubs['240']; 
