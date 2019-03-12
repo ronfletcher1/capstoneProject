@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 // import ZipCode from './ZipCode';
 import Wind from './Wind';
 import DistanceToHole from './DistanceToHole';
-import { Route }from "react-router-dom";
+import { Route } from "react-router-dom";
 import ProTips from './ProTips';
+import Contact from './Contact';
 
 
 
@@ -27,7 +28,7 @@ class Main extends Component {
         return (
             <div>
                 {/* <ZipCode /> */}
-                <DistanceToHole />
+                {/* <DistanceToHole /> */}
                 <Wind />
                 <Route exact path="/main/protips" component={ProTips} />
             </div>

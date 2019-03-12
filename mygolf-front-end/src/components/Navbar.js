@@ -29,7 +29,7 @@ import { Link } from 'react-router-dom'
             <li className="active"><a href="#">Home</a></li>
             <li className="active"><a href="#">MyGolfClubs</a></li>
             <Link to="/protips">Protips</Link>
-            <li className="active"><a href="#">Contact</a></li>
+            <Link to="/contact">Contact</Link>
                 </ul>
               </div>
             </nav>

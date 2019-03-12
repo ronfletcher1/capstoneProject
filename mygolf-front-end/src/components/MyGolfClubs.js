@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import Wind from './Wind'
 
+
 const myGolfClubs = {
     240: "Driver",
     200: "Hybrid",
@@ -88,9 +89,9 @@ class MyGolfClubs extends Component {
             <div>
 				{/* <h4>Golf Clubs</h4> */}
 				{/* <h1>Wind Adjuster<br></br>{this.state.temp}</h1> */}
-				<h4>Distance<br></br>{this.distanceToHole}</h4>
-				<h4>Distance to Hole<br></br>{golfShot}</h4>
-				<h4>Club Selection<br></br>{this.state.distanceToHole}</h4>
+				<h1>Distance<br></br>{golfShot}</h1>
+				<h1>Distance to Hole<br></br>{golfShot}</h1>
+				<h1>Club Selection<br></br>{golfShot}</h1>
 			</div>
             </div>
 		);
@@ -100,7 +101,7 @@ export default MyGolfClubs;
 
 
 
-{/* // this function adjust club max distances based on the difference in 
+/* // this function adjust club max distances based on the difference in 
 // in elevation from the base elevation
 // let currentElevation = 1093
 // let newElevation = 4000
@@ -141,4 +142,4 @@ export default MyGolfClubs;
 //     return myGolfClubs + 35
 // }
 
- */}
+ */
