@@ -17,7 +17,7 @@ class Wind extends Component {
 			wind_shot: ""
 		}
 	}
-  
+	// weather data api from openweather
 	getData = zipCode=>{
 		const url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
 		const axiosPromise = axios.get(url)
@@ -33,7 +33,7 @@ class Wind extends Component {
 		
 		});
 	}
-
+	// Zip code event used to get the value of the user input of the date
 	zipCode = (e)=>{
 		e.preventDefault()
 		console.log(e.target.zipcode.value)
@@ -43,13 +43,24 @@ class Wind extends Component {
 		this.getData(e.target.zipcode.value)
 	}
 
-	windShot = (speed, golfWindDirection, distance) => {
+	// wind shot calculates the the distance based on the wind speed,
+	// wind direction, and distance to the hole
+	
+	windShot = (distance, golfWindDirection, speed) => {
 		// let golfWindDirection = "headWind"
 		// let distance = 145
 		// this.setState({
 		// 	wind_shot: windShot
 		// })
+		// let speed = this.state.wind_speed;
+		console.log(distance)
+		console.log(golfWindDirection)
 		console.log(speed)
+		if(golfWindDirection){
+			if(golfWindDirection.substr('cross')){
+				return distance
+			}	
+		}
 		if (speed >= 40)
 			return "GO HOME";
 		if ((speed >= 35) && (golfWindDirection === "tailWind"))
@@ -110,33 +121,35 @@ class Wind extends Component {
 			return distance + (distance * .07);
 		if (((speed >= 35) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 35) && (golfWindDirection === "quarterWindRTW")))
-			return distance + (distance * .035);
+			return distance - (distance * .035);
 		if (((speed >= 30) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 30) && (golfWindDirection === "quarterWindRTW")))
-			return distance + (distance * .035);
+			return distance - (distance * .035);
 		if (((speed >= 25) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 25) && (golfWindDirection === "quarterWindRTW")))
-			return distance + (distance * .035);
+			return distance - (distance * .035);
 		if (((speed >= 20) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 20) && (golfWindDirection === "quarterWindRTW")))
-			return distance + (distance * .035);
+			return distance - (distance * .035);
 		if (((speed >= 15) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 15) && (golfWindDirection === "quarterWindRTW")))
-			return distance + (distance * .035);
+			return distance - (distance * .035);
 		if (((speed >= 10) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 10) && (golfWindDirection === "quarterWindRTW")))
-			return distance + (distance * .035);
+			return distance - (distance * .035);
 		if (((speed >= 5) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 5) && (golfWindDirection === "quarterWindRTW")))
-			return distance + (distance * .035);
+				return (distance - (distance * .035));			
 		if (((speed >= 2.5) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 2.5) && (golfWindDirection === "quarterWindRTW")))
-			return distance + (distance * .035);
-		if (((speed >= 35) && (golfWindDirection === "crossWindL")) ||
-		   ((speed >= 35) && (golfWindDirection === "crossWindR")))
-			return distance + (distance * .035);
+			return distance - (distance * .035);
+		// if (((speed >= 35) && (golfWindDirection === "crossWindL")) ||
+		//    ((speed >= 35) && (golfWindDirection === "crossWindR")))
+		// 	return distance + (distance * .035);
 	}
 
+	// wind Direction converts the wind degree into 8 directional 
+	// coordinates (N, NE, E, SE, S, SW, W, NW)
 	windDirection = (degree) => {
 		console.log(degree)
 		if ((degree >= 340 && degree <= 360) ||
@@ -157,7 +170,8 @@ class Wind extends Component {
 		if (degree > 290 && degree <= 340)
 			return "NW"		
   		}
-// direction you are facing towards the hole
+// facing direction is the direction you are facing towards the hole
+// expressed in degrees 
   facingDirection = (faceDegree) => {
 	// let faceDegree = 360;
 	console.log(faceDegree)
@@ -184,10 +198,12 @@ class Wind extends Component {
 	render() {
 		// let speed = 14.1;
 		// let distance = 145;
+		console.log(this.props)
 		let facingDirection = "N";
 		let golfWind = this.windDirection(this.state.wind_direction)
 		let golfWindDirection = golfWindDirectionfunction(golfWind, facingDirection)
-		let windFactor = this.windShot(this.state.wind_speed, golfWindDirection, this.state.distance)
+		let windFactor = this.windShot(this.props.distance, golfWindDirection, this.state.wind_speed)
+		console.log(windFactor)
 		return (
 			<div>
 				<Compass windBlowing={this.state.wind_direction}/>
@@ -196,15 +212,16 @@ class Wind extends Component {
 						<h4>Zip Code</h4>
 						<input id="searchTerm" type="number" name="zipcode"/>
 					</form>
-            	</div>
-					<h4>Golf Conditions</h4>
-					<h4>Current Temp<br></br>{this.state.temp}</h4>
-					<h4>Wind Speed<br></br>{this.state.wind_speed}</h4>
-					<h4>Wind Gust<br></br>{this.state.wind_gust}</h4>
-					<h4>Wind Blowing From<br></br>{golfWind}</h4>
-					<h4>Golf Wind Type<br></br>{golfWindDirection}</h4>
-					<h4>Plays Like<br></br>{this.state.windShot}</h4>
-					<h4>Wind Adjuster<br></br>{windFactor}</h4>
+            </div>
+				
+					<h1>Golf Conditions</h1>
+					<h1>Current Temp<br></br>{this.state.temp}</h1>
+					<h1>Wind Speed<br></br>{this.state.wind_speed}</h1>
+					<h1>Wind Gust<br></br>{this.state.wind_gust}</h1>
+					<h1>Wind Blowing From<br></br>{golfWind}</h1>
+					<h1>Golf Wind Type<br></br>{golfWindDirection}</h1>
+					<h1>Plays Like<br></br>{this.state.windShot}</h1>
+					<h1>Wind Adjuster<br></br>{windFactor}</h1>
 
 			</div>
 			);

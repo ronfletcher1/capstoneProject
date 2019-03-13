@@ -16,27 +16,24 @@ class Navbar extends Component{
    }
    render(){
      return(
-      <nav className="navbar navbar-inverse black">
-        <div className="container-fluid">
-          <div className="navbar-header center"> 
-            {/* <h4 className="navbar-brand">MyGolfConditions</h4> */}
-              <a className="navbar-brand" href="#">MyGolfConditions</a>
-              <button onClick={this.openMenu}><i className="fa fa-bars"></i></button>
-          </div>
-          <ul className={`nav navbar-nav
-            ${(this.state.isCollapsed)?'collapsed':''}
-          `}>
-          <li className="active"><a href="#">Home</a></li>
-          <li className="active"><a href="#">MyGolfClubs</a></li>
-          <li className="active"><a href="#">Pro Tips</a></li>
-            {/* <Link to="/">Home</Link>
+       <nav className="navbar navbar-inverse black">
+              <div className="container-fluid">
+                <div className="navbar-header center">
+                  <a className="navbar-brand" href="#">MyGolfConditions</a>
+                  <button onClick={this.openMenu}><i className="fa fa-bars"></i></button>
+                  </div>
+                <ul className={`nav navbar-nav
+             ${(this.state.isCollapsed)?'collapsed':''}
+           `} >
+            <li className="active"><a href="#">Home</a></li>
             <Link to="/mygolfclubs">MyGolfClubs</Link>
             <Link to="/protips">Protips</Link>
-            <Link to="/contact">Contact</Link> */}
-          </ul>
-        </div>
-      </nav> 
-    )
-  }
-}
-export default Navbar;
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+                </ul>
+              </div>
+            </nav>
+     )
+   }
+ }
+ export default Navbar;
