@@ -43,7 +43,7 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
-          <Route exact path="/navbar" component={Navbar} />
+          {/* <Route exact path="/navbar" component={Navbar} /> */}
           <Route exact path="/" component={Home} zipcode={this.state.zipcode} />
           <Route exact path="/mygolfclubs" component={MyGolfClubs} />
           <Route exact path="/protips" component={ProTips} />
@@ -51,7 +51,7 @@ class App extends Component {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/main" component={Main} />
           {/* <Route exact path="/" render={<Home zipcode={this.zipcode} />} /> */}
-          <Accordion rules={rules} />
+          {/* <Accordion rules={rules} /> */}
         </div>
       </Router>
     );

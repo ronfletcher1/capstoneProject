@@ -8,18 +8,23 @@ body {
   background-size: stretch;
   /* background-color: darkgreen; */
   /* background: linear-gradient(135deg, rgb(144, 187, 109) 0%,rgb(135, 193, 87) 100%); */
+
   /* background-size: cover; */
   background-repeat: no-repeat;
+
   margin: 0;
   padding: 0; 
 }
 
 h1 {
   font-size: 15px;
+  color: black;
+  text-align: center;
 }
 h4 {
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
+  color: black;
 }
 header {
   text-align: center;
@@ -37,7 +42,7 @@ input[type=text],input[type=email], select, textarea {
   resize: vertical;
 }
 label {
-  color: black;
+  color: lightblue;
 }
 input[type=submit] {
   background-color: #4CAF50;

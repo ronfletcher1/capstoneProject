@@ -6,33 +6,28 @@ class Navbar extends Component{
    constructor(){
      super();
      this.state={
-       isCollapsed: true
+       showItem: true,
      }
    }
-   openMenu = e => {
-     this.setState({
-       isCollapsed: !this.state.isCollapsed
-     })
-   }
+
    render(){
      return(
-       <nav className="navbar navbar-inverse black">
-              <div className="container-fluid">
-                <div className="navbar-header center">
-                  <a className="navbar-brand" href="#">MyGolfConditions</a>
-                  <button onClick={this.openMenu}><i className="fa fa-bars"></i></button>
-                  </div>
-                <ul className={`nav navbar-nav
-             ${(this.state.isCollapsed)?'collapsed':''}
-           `} >
-            <li className="active"><a href="#">Home</a></li>
-            <Link to="/mygolfclubs">MyGolfClubs</Link>
-            <Link to="/protips">Protips</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-                </ul>
-              </div>
-            </nav>
+      <div>
+       <nav>
+                {/* <Post />  to simplify app.js */}
+                <div className="nav-wrapper black">
+                    <Link to="/" className="brand-logo center">MyGolfConditions</Link>
+                    <ul className="left hide-on-med-and-down miniNav">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/mygolfclubs">GolfClubs</Link></li>
+                        <li><Link to="/protips">Protips</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                    </ul>
+                </div>
+          </nav>
+      </div>
+      // <Link to="/" className="mygolfconditions">MyGolfConditions</Link>
      )
    }
  }
