@@ -2,7 +2,7 @@ let golfWindDirection = (windDirection, facingDirection)=>{
     console.log(windDirection)
     console.log(facingDirection)
 // golf wind type based on northerly wind
-if (windDirection === "N" && facingDirection === 360) 
+if (windDirection === "N" && facingDirection === "N") 
     return "headWind"
 if (windDirection === "N" && facingDirection === "E")
     return "crossWindL"

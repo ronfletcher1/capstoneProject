@@ -4,11 +4,12 @@
 body {
   /* font-family: 'Courier New', Courier, monospace; */
   font-size: 14px;
-  background: url("https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
-  background-size: cover;
+  background: url("https://i.pinimg.com/originals/f2/56/fa/f256fa53f4a71faeafdc7d83ece05548.jpg");
+  background-size: stretch;
   /* background-color: darkgreen; */
   /* background: linear-gradient(135deg, rgb(144, 187, 109) 0%,rgb(135, 193, 87) 100%); */
-  background-size: cover;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0; 
 }

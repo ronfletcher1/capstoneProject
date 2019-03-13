@@ -56,96 +56,119 @@ class Wind extends Component {
 		console.log(distance)
 		console.log(golfWindDirection)
 		console.log(speed)
-		if(golfWindDirection){
-			if(golfWindDirection.substr('cross')){
-				return distance
-			}	
-		}
+
+		// wind speed over 40 mph
 		if (speed >= 40)
 			return "GO HOME";
+			
+		// wind speed over 35 mph
 		if ((speed >= 35) && (golfWindDirection === "tailWind"))
 			return distance - (distance * .05);
-		if ((speed >= 30) && (golfWindDirection === "tailWind"))
-			return distance - (distance * .05);
-		if ((speed >= 25) && (golfWindDirection === "tailWind"))
-			return distance - (distance * .05);
-		if ((speed >= 20) && (golfWindDirection === "tailWind"))
-			return distance - (distance * .05);
-		if ((speed >= 15) && (golfWindDirection === "tailWind"))
-			return distance - (distance * .05);
-		if ((speed >= 10) && (golfWindDirection === "tailWind"))
-			return distance - (distance * .05);
-		if ((speed >= 5) && (golfWindDirection === "tailWind"))
-			return distance - (distance * .05);
-		if ((speed >= 2.5) && (golfWindDirection === "tailWind"))
-			return distance - (distance * .05);
 		if ((speed >= 35) && (golfWindDirection === "headWind"))
-			return distance + (distance * .1);
-		if ((speed >= 30) && (golfWindDirection === "headWind"))
-			return distance + (distance * .1);
-		if ((speed >= 25) && (golfWindDirection === "headWind"))
-			return distance + (distance * .1);
-		if ((speed >= 20) && (golfWindDirection === "headWind"))
-			return distance + (distance * .1);
-		if ((speed >= 15) && (golfWindDirection === "headWind"))
-			return distance + (distance * .1);
-		if ((speed >= 10) && (golfWindDirection === "headWind"))
-			return distance + (distance * .1);
-		if ((speed >= 5) && (golfWindDirection === "headWind"))
-			return distance + (distance * .1);
-		if ((speed >= 2.5) && (golfWindDirection === "headWind"))
 			return distance + (distance * .1);
 		if (((speed >= 35) && (golfWindDirection === "quarterWindLHW")) ||
 		   ((speed >= 35) && (golfWindDirection === "quarterWindRHW")))
 			return distance + (distance * .07);
-		if (((speed >= 30) && (golfWindDirection === "quarterWindLHW")) ||
-		   ((speed >= 30) && (golfWindDirection === "quarterWindRHW")))
-			return distance + (distance * .07);
-		if (((speed >= 25) && (golfWindDirection === "quarterWindLHW")) ||
-		   ((speed >= 25) && (golfWindDirection === "quarterWindRHW")))
-			return distance + (distance * .07);
-		if (((speed >= 20) && (golfWindDirection === "quarterWindLHW")) ||
-		   ((speed >= 20) && (golfWindDirection === "quarterWindRHW")))
-			return distance + (distance * .07);
-		if (((speed >= 15) && (golfWindDirection === "quarterWindLHW")) ||
-		   ((speed >= 15) && (golfWindDirection === "quarterWindRHW")))
-			return distance + (distance * .07);
-		if (((speed >= 10) && (golfWindDirection === "quarterWindLHW")) ||
-		   ((speed >= 10) && (golfWindDirection === "quarterWindRHW")))
-			return distance + (distance * .07);
-		if (((speed >= 5) && (golfWindDirection === "quarterWindLHW")) ||
-		   ((speed >= 5) && (golfWindDirection === "quarterWindRHW")))
-			return distance + (distance * .07);
-		if (((speed >= 2.5) && (golfWindDirection === "quarterWindLHW")) ||
-		   ((speed >= 2.5) && (golfWindDirection === "quarterWindRHW")))
-			return distance + (distance * .07);
 		if (((speed >= 35) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 35) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
+console.log("step 1")
+
+		// wind speed over 30 mph
+		if ((speed >= 30) && (golfWindDirection === "tailWind"))
+			return distance - (distance * .05);
+		if ((speed >= 30) && (golfWindDirection === "headWind"))
+			return distance + (distance * .1);
+		if (((speed >= 30) && (golfWindDirection === "quarterWindLHW")) ||
+		   ((speed >= 30) && (golfWindDirection === "quarterWindRHW")))
+			return distance + (distance * .07);
 		if (((speed >= 30) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 30) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
+			console.log("step 2")
+
+		// wind speed over 25 mph	
+		if ((speed >= 25) && (golfWindDirection === "tailWind"))
+			return distance - (distance * .05);
+		if ((speed >= 25) && (golfWindDirection === "headWind"))
+			return distance + (distance * .1);
+		if (((speed >= 25) && (golfWindDirection === "quarterWindLHW")) ||
+		   ((speed >= 25) && (golfWindDirection === "quarterWindRHW")))
+			return distance + (distance * .07);
 		if (((speed >= 25) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 25) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
+			console.log("step 3")
+	   // wind speed over 20 mph
+		if ((speed >= 20) && (golfWindDirection === "headWind"))
+			return distance + (distance * .1);
+		if ((speed >= 20) && (golfWindDirection === "tailWind"))
+			return distance - (distance * .05);
+		if (((speed >= 20) && (golfWindDirection === "quarterWindLHW")) ||
+		   ((speed >= 20) && (golfWindDirection === "quarterWindRHW")))
+			return distance + (distance * .07);
 		if (((speed >= 20) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 20) && (golfWindDirection === "quarterWindRTW")))
-			return distance - (distance * .035);
+			return distance - (distance * .035);	
+			
+			console.log("step 4")
+		// wind speed over 15 mph
+		if ((speed >= 15) && (golfWindDirection === "tailWind"))
+			return distance - (distance * .05);
+		if ((speed >= 15) && (golfWindDirection === "headWind"))
+			return distance + (distance * .1);
+		if (((speed >= 15) && (golfWindDirection === "quarterWindLHW")) ||
+		   ((speed >= 15) && (golfWindDirection === "quarterWindRHW")))
+			return distance + (distance * .07);
 		if (((speed >= 15) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 15) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
+
+			console.log("step 5")
+		// wind speed over 10 mph
+		if ((speed >= 10) && (golfWindDirection === "tailWind"))
+			return distance - (distance * .05);
+		if ((speed >= 10) && (golfWindDirection === "headWind"))
+			return distance + (distance * .1);
+		if (((speed >= 10) && (golfWindDirection === "quarterWindLHW")) ||
+		   ((speed >= 10) && (golfWindDirection === "quarterWindRHW")))
+			return distance + (distance * .07);
 		if (((speed >= 10) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 10) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
+			console.log("step 6")
+		// wind speed over 5 mph
+		if ((speed >= 5) && (golfWindDirection === "tailWind")){
+		console.log(distance - (distance * .05))
+			return distance - (distance * .05);
+		}
+		if ((speed >= 5) && (golfWindDirection === "headWind"))
+			return distance + (distance * .1);
+		if (((speed >= 5) && (golfWindDirection === "quarterWindLHW")) ||
+		   ((speed >= 5) && (golfWindDirection === "quarterWindRHW")))
+			return distance + (distance * .07);
 		if (((speed >= 5) && (golfWindDirection === "quarterWindLTW")) ||
-		   ((speed >= 5) && (golfWindDirection === "quarterWindRTW")))
-				return (distance - (distance * .035));			
+			((speed >= 5) && (golfWindDirection === "quarterWindRTW"))){
+				console.log(distance - (distance * .035))
+				return (distance - (distance * .035));
+			}
+				
+			console.log("step 7")
+		// wind speed over 2.5 mph
+		if ((speed >= 2.5) && (golfWindDirection === "tailWind"))
+			return distance - (distance * .05);
+		if ((speed >= 2.5) && (golfWindDirection === "headWind"))
+			return distance + (distance * .1);
+		if (((speed >= 2.5) && (golfWindDirection === "quarterWindLHW")) ||
+		   ((speed >= 2.5) && (golfWindDirection === "quarterWindRHW")))
+			return distance + (distance * .07);		
 		if (((speed >= 2.5) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 2.5) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
 		// if (((speed >= 35) && (golfWindDirection === "crossWindL")) ||
 		//    ((speed >= 35) && (golfWindDirection === "crossWindR")))
 		// 	return distance + (distance * .035);
+		return distance
 	}
 
 	// wind Direction converts the wind degree into 8 directional 
@@ -172,6 +195,7 @@ class Wind extends Component {
   		}
 // facing direction is the direction you are facing towards the hole
 // expressed in degrees 
+	
   facingDirection = (faceDegree) => {
 	// let faceDegree = 360;
 	console.log(faceDegree)
@@ -199,10 +223,11 @@ class Wind extends Component {
 		// let speed = 14.1;
 		// let distance = 145;
 		console.log(this.props)
-		let facingDirection = "N";
 		let golfWind = this.windDirection(this.state.wind_direction)
-		let golfWindDirection = golfWindDirectionfunction(golfWind, facingDirection)
-		let windFactor = this.windShot(this.props.distance, golfWindDirection, this.state.wind_speed)
+		console.log(golfWind)
+		let golfWindDirection = golfWindDirectionfunction(golfWind, this.facingDirection(360))
+		console.log(golfWindDirection)
+		let windFactor = this.windShot(Number(this.props.distance), golfWindDirection, this.state.wind_speed)
 		console.log(windFactor)
 		return (
 			<div>
