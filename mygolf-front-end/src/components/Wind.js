@@ -197,14 +197,14 @@ class Wind extends Component {
 						<input id="searchTerm" type="number" name="zipcode"/>
 					</form>
             	</div>
-					<h1>Golf Conditions</h1>
-					<h1>Current Temp<br></br>{this.state.temp}</h1>
-					<h1>Wind Speed<br></br>{this.state.wind_speed}</h1>
-					<h1>Wind Gust<br></br>{this.state.wind_gust}</h1>
-					<h1>Wind Blowing From<br></br>{golfWind}</h1>
-					<h1>Golf Wind Type<br></br>{golfWindDirection}</h1>
-					<h1>Plays Like<br></br>{this.state.windShot}</h1>
-					<h1>Wind Adjuster<br></br>{this.state.windFactor}</h1>
+					<h4>Golf Conditions</h4>
+					<h4>Current Temp<br></br>{this.state.temp}</h4>
+					<h4>Wind Speed<br></br>{this.state.wind_speed}</h4>
+					<h4>Wind Gust<br></br>{this.state.wind_gust}</h4>
+					<h4>Wind Blowing From<br></br>{golfWind}</h4>
+					<h4>Golf Wind Type<br></br>{golfWindDirection}</h4>
+					<h4>Plays Like<br></br>{this.state.windShot}</h4>
+					<h4>Wind Adjuster<br></br>{windFactor}</h4>
 
 			</div>
 			);

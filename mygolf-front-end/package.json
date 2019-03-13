@@ -9,6 +9,7 @@
     "react-compass": "^0.1.0",
     "react-device-orientation": "0.0.2",
     "react-dom": "^16.8.3",
+    "react-materialize": "^2.6.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.5"

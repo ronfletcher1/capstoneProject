@@ -4,11 +4,11 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    transition: 2s;
-    opacity: 1;
+    transition: 1s;
+    opacity: .5;
  }
  .navbar-nav.collapsed {
-  height: 0px;
+  height: 45px;
   overflow: hidden;
   opacity: 0;
  
@@ -26,7 +26,8 @@
     cursor: pointer;
     text-align: center;
     transition: background 250ms ease-in-out,
-                transform 150ms ease;
+                transform 150ms ease-in;
+      
     -webkit-appearance: none;
     -moz-appearance: none;
  }
@@ -37,10 +38,14 @@
  }
  
  button:focus {
-    outline: 0px;
+    outline: 1px solid red;
     outline-offset: -4px;
  }
  
  button:active {
-    transform: scale(0.99);
+    transform: scale(0.70);
  }
+ /* .navbar-header h4 {
+    outline: solid 2px red; 
+    margin-top: 0px;
+ } */

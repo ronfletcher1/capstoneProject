@@ -70,7 +70,7 @@ class MyGolfClubs extends Component {
         return myGolfClubs['125']; 
         } else if (distance > 95) { 
         return myGolfClubs['115']; 
-        } else if (distance > 80) { 
+        } else if (distance > 10) { 
         return myGolfClubs['95']; 
         } 
     }
@@ -90,9 +90,9 @@ class MyGolfClubs extends Component {
             <div>
 				{/* <h4>Golf Clubs</h4> */}
 				{/* <h1>Wind Adjuster<br></br>{this.state.temp}</h1> */}
-				<h1>Distance<br></br>{golfShot}</h1>
-				<h1>Distance to Hole<br></br>{golfShot}</h1>
-				<h1>Club Selection<br></br>{golfShot}</h1>
+				<h4>Distance<br></br>{golfShot}</h4>
+				<h4>Distance to Hole<br></br>{golfShot}</h4>
+				<h4>Club Selection<br></br>{golfShot}</h4>
 			</div>
             </div>
 		);

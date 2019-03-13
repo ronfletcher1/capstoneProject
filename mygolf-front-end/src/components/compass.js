@@ -19,10 +19,10 @@ class Compass extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="first">
         <DeviceOrientation>
           {({ absolute, alpha, beta, gamma }) => (
-            <div>
+            <div className="outter-compass">
               {`${absolute}`}
               {`${alpha}`}
               {`${beta}`}

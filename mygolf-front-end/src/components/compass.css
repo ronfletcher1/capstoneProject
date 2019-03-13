@@ -7,16 +7,29 @@
     position: relative;
     transform: rotate(0deg);
   }
-  
+  .outter-compass {
+    display: flex;
+    justify-content: center;
+  }
   .compass-arrow {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: calc(50% - 30px);
-  left: calc(50% - 20px);
-  border-bottom: 60px solid white;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
+    width: 150px;
+    height: 20px;
+    /* background: green; */
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 25px;
+    transform-origin: center;
+    /* border-left: 00px solid transparent;   */
+    /* left arrow slant */
+    border-right: 100px solid transparent; 
+    /* right arrow slant */
+    border-bottom: 10px solid green; 
+    /* bottom, add background color here */
+    font-size: 0;
+    line-height: 0;
+    border-width: 0px 10px 10px 0px;
+    border-radius: 0px 90px 90px 0px;
+    display: inline-block;
   transform: rotate(320deg);
   -webkit-transition: transform .25s ease;
      -moz-transition: transform .25s ease;
