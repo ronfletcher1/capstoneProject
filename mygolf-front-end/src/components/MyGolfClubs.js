@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+
 import Wind from './Wind'
 
-
+// golf club set up; max distance and type
 const myGolfClubs = {
     240: "Driver",
     200: "Hybrid",
@@ -43,9 +43,10 @@ class MyGolfClubs extends Component {
         })
 
     }
+    // calculates the club to use for the distance entered
     distanceToHole = (distance)=>{
-        // let distance = 145
         console.log(distance)
+        
         if (distance > 225) {
         return myGolfClubs['240']; 
         } else if (distance > 190) { 
@@ -70,7 +71,7 @@ class MyGolfClubs extends Component {
         return myGolfClubs['125']; 
         } else if (distance > 95) { 
         return myGolfClubs['115']; 
-        } else if (distance > 80) { 
+        } else if (distance > 10) { 
         return myGolfClubs['95']; 
         } 
     }
@@ -80,7 +81,7 @@ class MyGolfClubs extends Component {
         console.log(golfShot)
 		return (
 			<div>
-                < Wind />
+                < Wind distance={this.state.shot_distance} />
 			<div>
                 <form onSubmit={this.distance}>
                     <h4>Distance</h4>
@@ -102,45 +103,3 @@ export default MyGolfClubs;
 
 
 
-/* // this function adjust club max distances based on the difference in 
-// in elevation from the base elevation
-// let currentElevation = 1093
-// let newElevation = 4000
-// function clubAdjust(elevation){
-//     if (newElevation > currentElevation)
-//     return myGolgclubs + 10;
-// };
-// console.log(myGolfClubs)
-
-// this function calculates the new distance based on the wind direction
-// and wind speed
-// let windDirection = x;
-// let windSpeed = z;
-// function windDistance(windDirection, windSpeed){
-//     if(windDirection = N && windSpeed > 3)
-//     return windDistance;
-// }
-
-// console.log(windDirection(300))
-
-// this function selects the appropriate club to use based on the new
-// distance
-// let windDistance = 10
-// function clubSelector(windDistance){
-//     if(windDistance >= 5)
-//     return myGolfClubs + 5
-//     if(windDistance >= 10)
-//     return myGolfClubs + 10
-//     if(windDistance >= 15)
-//     return myGolfClubs + 15
-//     if(windDistance >= 20)
-//     return myGolfClubs + 20
-//     if(windDistance >= 25)
-//     return myGolfClubs + 25
-//     if(windDistance >= 30)
-//     return myGolfClubs + 30
-//     if(windDistance >= 35)
-//     return myGolfClubs + 35
-// }
-
- */

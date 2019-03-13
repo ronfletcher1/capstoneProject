@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-// import ZipCode from './ZipCode';
+import ZipCode from './ZipCode';
 import Wind from './Wind';
-import DistanceToHole from './DistanceToHole';
+// import DistanceToHole from './DistanceToHole';
 import { Route } from "react-router-dom";
 import ProTips from './ProTips';
-import Contact from './Contact';
+import About from './About';
+import MyGolfClubs from './MyGolfClubs';
 
 
 
@@ -27,10 +28,12 @@ class Main extends Component {
     render(){
         return (
             <div>
-                {/* <ZipCode /> */}
+                <ZipCode />
                 {/* <DistanceToHole /> */}
                 <Wind />
                 <Route exact path="/main/protips" component={ProTips} />
+                <Route exact path="/main/about" component={About} />
+                <Route exact path="/main/mygolfclubs" component={MyGolfClubs} />
             </div>
         )
         
@@ -41,17 +44,3 @@ class Main extends Component {
 export default Main;
 
 
-// const apiKey = '4f07010379e47f6a469c0dd30c83d3a6';
-
-// const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?units=imperial&appid=4f07010379e47f6a469c0dd30c83d3a6&zip="30328"`;
-// function fetchWeather(){
-//     fetch(weatherUrl)
-//     .then(r => r.json())
-//     console.log(r)
-//     .then(windData)
-//     .then(displayData)
-// };
-
-// function windData(wind) {
-//     console.log(wind)
-// }
