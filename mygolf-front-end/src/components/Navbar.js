@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-import ProTips from './ProTips';
+// import ProTips from './ProTips';
 import { Link } from 'react-router-dom'
 
  class Navbar extends Component{
@@ -27,8 +27,9 @@ import { Link } from 'react-router-dom'
              ${(this.state.isCollapsed)?'collapsed':''}
            `} >
             <li className="active"><a href="#">Home</a></li>
-            <li className="active"><a href="#">MyGolfClubs</a></li>
+            <Link to="/mygolfclubs">MyGolfClubs</Link>
             <Link to="/protips">Protips</Link>
+            <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
                 </ul>
               </div>

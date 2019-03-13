@@ -14,7 +14,7 @@
   position: absolute;
   top: calc(50% - 30px);
   left: calc(50% - 20px);
-  border-bottom: 60px solid white;
+  /* border-bottom: 60px solid white;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   transform: rotate(320deg);
@@ -22,10 +22,11 @@
      -moz-transition: transform .25s ease;
       -ms-transition: transform .25s ease;
        -o-transition: transform .25s ease;
-          transition: transform .25s ease;
+          transition: transform .25s ease; */
   }
   
   .wind-arrow {
+    background: url(/images/GolfWind.jpg);
     width: 150px;
     height: 20px;
     /* background: green; */
