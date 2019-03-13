@@ -4,6 +4,7 @@ import './compass.css';
 
 class Compass extends Component {
 
+
   constructor(props) {
 		super(props);
 		this.state = {
