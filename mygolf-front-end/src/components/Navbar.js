@@ -20,7 +20,7 @@ class Navbar extends Component{
                     <ul className="left hide-on-med-and-down miniNav">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/mygolfclubs">GolfClubs</Link></li>
-                        <li><Link to="/protips">Protips</Link></li>
+                        <li><Link to="/protips">Pro Tips</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                     </ul>

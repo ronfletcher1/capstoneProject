@@ -81,20 +81,26 @@ class MyGolfClubs extends Component {
         console.log(golfShot)
 		return (
 			<div>
-                < Wind distance={this.state.shot_distance} />
-			<div>
-                <form onSubmit={this.distance}>
-                    <h4>Distance</h4>
-                    <input id="searchTerm" type="number" name="distance"/>
-                </form>
-            </div>
-            <div>
-				{/* <h4>Golf Clubs</h4> */}
-				{/* <h1>Wind Adjuster<br></br>{this.state.temp}</h1> */}
-				<h4>Distance<br></br>{golfShot}</h4>
-				<h4>Distance to Hole<br></br>{golfShot}</h4>
-				<h4>Club Selection<br></br>{golfShot}</h4>
-			</div>
+                <div>
+                        < Wind distance={this.state.shot_distance} />
+                    <div>
+                        <form onSubmit={this.distance}>
+                            <h4>Distance</h4>
+                            <input id="searchTerm" type="number" name="distance"/>
+                        </form>
+                    </div>
+                    <div>
+						<div>
+                            <div>
+                                {/* <h4>Golf Clubs</h4> */}
+                                {/* <h1>Wind Adjuster<br></br>{this.state.temp}</h1> */}
+                                <h4>Distance<br></br>{this.shot_distance}</h4><br></br>
+                                <h4>Distance to Hole<br></br>{golfShot}</h4><br></br>
+                                <h4>Club Selection<br></br>{golfShot}</h4><br></br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 		);
     }
