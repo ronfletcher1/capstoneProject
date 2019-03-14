@@ -82,7 +82,8 @@ class MyGolfClubs extends Component {
 		return (
 			<div>
                 <div>
-                        < Wind distance={this.state.shot_distance} />
+                        < Wind distance={this.state.shot_distance} zipcode={this.props.zipcode} />
+
                     <div>
                         <form onSubmit={this.distance}>
                             <h4>Distance</h4>
