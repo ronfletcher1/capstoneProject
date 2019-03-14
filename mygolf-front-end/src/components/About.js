@@ -6,8 +6,8 @@ class About extends Component{
         return(
     <div className="about">
         <div className="container">
-            <header>About</header>
-               <li><h4>MyColfConditions</h4></li>
+            <header>About MyColfConditions</header>
+               {/* <li><h4>MyColfConditions</h4></li> */}
                 <br></br>MyColfConditions is an app that provides the user with updated 
                 weather data and then suggest the club to use based on the  
                 weather conditions.<br></br>
