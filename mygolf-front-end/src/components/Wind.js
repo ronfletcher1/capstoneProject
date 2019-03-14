@@ -17,31 +17,40 @@ class Wind extends Component {
 			wind_shot: ""
 		}
 	}
+
+	componentDidMount = () => {
+		// getData = (zipCode) =>{
+			let zipCode = this.props.zipcode
+			console.log(zipCode)
+			const url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
+			const axiosPromise = axios.get(url)
+			axiosPromise.then((weatherData) => {
+				console.log('wind_direction:', weatherData.data.wind.deg)
+				console.log(weatherData);
+				this.setState({
+					temp: weatherData.data.main.temp,
+					wind_speed: weatherData.data.wind.speed,
+					wind_direction: weatherData.data.wind.deg,
+					wind_gust: weatherData.data.wind.gust,
+				})
+			
+			});
+	
+			 
+	 }
+
+
 	// weather data api from openweather
-	getData = zipCode=>{
-		const url = `http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=${zipCode},us&appid=482c145ce8edf1d69ea5168f9d06460c`;
-		const axiosPromise = axios.get(url)
-		axiosPromise.then((weatherData) => {
-			console.log('wind_direction:', weatherData.data.wind.deg)
-			console.log(weatherData);
-			this.setState({
-				temp: weatherData.data.main.temp,
-				wind_speed: weatherData.data.wind.speed,
-				wind_direction: weatherData.data.wind.deg,
-				wind_gust: weatherData.data.wind.gust,
-			})
-		
-		});
-	}
-	// Zip code event used to get the value of the user input of the date
-	zipCode = (e)=>{
-		e.preventDefault()
-		console.log(e.target.zipcode.value)
-		this.setState({
-			zip_code: e.target.zipcode.value	
-		})
-		this.getData(e.target.zipcode.value)
-	}
+	
+	// // Zip code event used to get the value of the user input of the date
+	// zipCode = (e)=>{
+	// 	e.preventDefault()
+	// 	console.log(e.target.zipcode.value)
+	// 	this.setState({
+	// 		zip_code: e.target.zipcode.value	
+	// 	})
+	// 	this.getData(e.target.zipcode.value)
+	// }
 
 	// wind shot calculates the the distance based on the wind speed,
 	// wind direction, and distance to the hole
@@ -241,12 +250,12 @@ class Wind extends Component {
 
 			<div className="container">
 
-				<div className="zipcode">
+				{/* <div className="zipcode">
 					<form onSubmit={this.zipCode}>
 						<h4>Zip Code</h4>
 						<input id="searchTerm" align="right" type="number" name="zipcode"/>
 					</form>
-            </div>
+            </div> */}
 
 				<div className="container">
 					<div className="jumbotron" style={divStyle}>
