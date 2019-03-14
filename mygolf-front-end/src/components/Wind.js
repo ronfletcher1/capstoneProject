@@ -72,7 +72,7 @@ class Wind extends Component {
 		if (((speed >= 35) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 35) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
-console.log("step 1")
+		console.log("step 1")
 
 		// wind speed over 30 mph
 		if ((speed >= 30) && (golfWindDirection === "tailWind"))
@@ -99,6 +99,7 @@ console.log("step 1")
 		   ((speed >= 25) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
 			console.log("step 3")
+
 	   // wind speed over 20 mph
 		if ((speed >= 20) && (golfWindDirection === "headWind"))
 			return distance + (distance * .1);
@@ -110,8 +111,8 @@ console.log("step 1")
 		if (((speed >= 20) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 20) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);	
-			
 			console.log("step 4")
+
 		// wind speed over 15 mph
 		if ((speed >= 15) && (golfWindDirection === "tailWind"))
 			return distance - (distance * .05);
@@ -123,8 +124,8 @@ console.log("step 1")
 		if (((speed >= 15) && (golfWindDirection === "quarterWindLTW")) ||
 		   ((speed >= 15) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
+		console.log("step 5")
 
-			console.log("step 5")
 		// wind speed over 10 mph
 		if ((speed >= 10) && (golfWindDirection === "tailWind"))
 			return distance - (distance * .05);
@@ -137,6 +138,7 @@ console.log("step 1")
 		   ((speed >= 10) && (golfWindDirection === "quarterWindRTW")))
 			return distance - (distance * .035);
 			console.log("step 6")
+
 		// wind speed over 5 mph
 		if ((speed >= 5) && (golfWindDirection === "tailWind")){
 		console.log(distance - (distance * .05))
@@ -229,25 +231,63 @@ console.log("step 1")
 		console.log(golfWindDirection)
 		let windFactor = this.windShot(Number(this.props.distance), golfWindDirection, this.state.wind_speed)
 		console.log(windFactor)
+		const divStyle ={
+			color: 'blue',
+			backgrundImage: 'url("https://i.pinimg.com/originals/f2/56/fa/f256fa53f4a71faeafdc7d83ece05548.jpg")',
+		}
 		return (
 			<div>
-				<Compass windBlowing={this.state.wind_direction}/>
-				<div>
+				
+
+			<div className="container">
+
+				<div className="zipcode">
 					<form onSubmit={this.zipCode}>
 						<h4>Zip Code</h4>
-						<input id="searchTerm" type="number" name="zipcode"/>
+						<input id="searchTerm" align="right" type="number" name="zipcode"/>
 					</form>
             </div>
-				
-					<h1>Golf Conditions</h1>
-					<h1>Current Temp<br></br>{this.state.temp}</h1>
-					<h1>Wind Speed<br></br>{this.state.wind_speed}</h1>
-					<h1>Wind Gust<br></br>{this.state.wind_gust}</h1>
-					<h1>Wind Blowing From<br></br>{golfWind}</h1>
-					<h1>Golf Wind Type<br></br>{golfWindDirection}</h1>
-					<h1>Plays Like<br></br>{this.state.windShot}</h1>
-					<h1>Wind Adjuster<br></br>{windFactor}</h1>
 
+				<div className="container">
+					<div className="jumbotron" style={divStyle}>
+						<Compass windBlowing={this.state.wind_direction}/>
+					</div>
+				</div>
+
+			</div>
+			<br></br>
+			<br></br>
+				
+				<div className="container">
+					
+					<div className="jumbotron">
+					<h1>Golf Conditions</h1>
+					<div className="container-fluid">
+						<div className="row-fluid">
+
+						<div className="col-md-2">
+							<h1>Current Temp<br></br>{this.state.temp}</h1>
+						</div>
+						<div className="col-md-2">
+							<h1>Wind Speed<br></br>{this.state.wind_speed}</h1>
+						</div>
+						<div className="col-md-2">
+							<h1>Wind Gust<br></br>{this.state.wind_gust}</h1>
+						</div>
+						<div className="col-md-2">
+							<h1>Wind Blowing From<br></br>{golfWind}</h1>
+						</div>
+						<div className="col-md-2">
+							<h1>Golf Wind Type<br></br>{golfWindDirection}</h1>
+						</div>
+						<div className="col-md-2">
+							<h1>Plays Like<br></br>{windFactor}</h1>
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+						{/* <h1>Wind Adjuster<br></br>{windFactor}</h1> */}
 			</div>
 			);
 		}

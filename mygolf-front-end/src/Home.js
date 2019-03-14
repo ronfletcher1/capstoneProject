@@ -24,9 +24,16 @@ class Home extends Component{
         return(
             <div className="container">
             <form onSubmit={this.props.zipcode}>
-              <h4>Enter Your Playing Location</h4>
-              <input id="searchTerm" type="number" name="zipcode" />
-              <input type="submit" value="submit" /> 
+              <h4>Where Are You Playing Today?</h4><br></br>
+              {/* <input id="searchTerm" type="number" name="zipcode" /> */}
+              <div className="zipHolder">
+                <input id="searchTerm" type="number" name="zipcode" />
+                <h4>Enter Zip Code</h4>
+              </div>
+              <div className="buttonHolder">
+                <input type="submit" align="right" value="submit" /> 
+              </div>
+              
             </form>
           </div>
         )

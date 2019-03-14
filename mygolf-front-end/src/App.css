@@ -44,13 +44,15 @@ input[type=text],input[type=email], select, textarea {
 label {
   color: lightblue;
 }
-input[type=submit] {
+input[type=submit]  {
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  position: center;
+  text-align: center;
 }
 input[type=submit]:hover {
   background-color: #45a049;
@@ -69,3 +71,46 @@ input[type=submit]:hover {
     background-position-x:-600px;
   }
 }
+
+.buttonHolder{ 
+  text-align: center; 
+}
+
+.zipHolder{
+  text-align: center;
+  border-radius: 4px;
+}
+
+.jumbotron{
+  position: relative;
+  padding:0 !important;
+  margin-top:70px !important;
+  background: #eee;
+  margin-top: 23px;
+  text-align:center;
+  margin-bottom: 0 !important;
+  background: url("https://i.pinimg.com/originals/f2/56/fa/f256fa53f4a71faeafdc7d83ece05548.jpg");
+}
+.container-fluid{
+  padding:0 !important;
+}
+.col-xs-4{
+  background:rgba(157,52,99,0.7);    
+}
+
+.jumbotron{
+  position: relative;
+  padding:0 !important;
+  margin-top:70px !important;
+  background: #eee;
+  margin-top: 23px;
+  text-align:center;
+  margin-bottom: 0 !important;
+}
+.container-fluid{
+  padding:0 !important;
+}
+.col-xs-4{
+  background:rgba(157,52,99,0.7);    
+}
+
